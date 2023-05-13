@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World</title>
+  </head>
+  <body>
+    <h1 id="message"></h1>
+    <script>
+      fetch('/hello')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('message').innerText = data.message;
+        });
+    </script>
+  </body>
+</html>
